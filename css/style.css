@@ -16,6 +16,8 @@ body {
 }
 
 .tableTop__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-family: "Ubuntu", sans-serif;
   font-style: normal;
@@ -24,7 +26,9 @@ body {
 }
 
 .tableTop__images {
-  flex: 0 0 60%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
   position: relative;
   margin: 55px 0 25px 0;
 }
@@ -36,7 +40,9 @@ body {
 }
 
 .tableTop__content {
-  flex: 0 0 40%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
   max-width: 500px;
 }
 
@@ -60,7 +66,9 @@ body {
 }
 
 img.tableTop__images-top._goUp {
-  transform: translateY(-70px);
+  -webkit-transform: translateY(-70px);
+      -ms-transform: translateY(-70px);
+          transform: translateY(-70px);
 }
 
 .tableTop__button--up,
@@ -92,7 +100,9 @@ img.tableTop__images-top._goUp {
   }
 
   .tableTop__content {
-    flex: 0 0 auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
     max-width: 294px;
   }
 
@@ -126,11 +136,15 @@ img.tableTop__images-top._goUp {
   }
 
   .tableTop__images-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 
   .tableTop__button--up {
@@ -138,7 +152,9 @@ img.tableTop__images-top._goUp {
   }
 
   img.tableTop__images-top._goUp {
-    transform: translateY(-25px);
+    -webkit-transform: translateY(-25px);
+        -ms-transform: translateY(-25px);
+            transform: translateY(-25px);
   }
 }
 
@@ -152,6 +168,8 @@ img.tableTop__images-top._goUp {
 }
 
 .voiceControl__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -160,7 +178,9 @@ img.tableTop__images-top._goUp {
 }
 
 .voiceControl__content {
-  flex: 0 0 45%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
   padding-left: 50px;
 }
 
@@ -186,7 +206,9 @@ img.tableTop__images-top._goUp {
 }
 
 .voiceControl__interface-img {
-  flex: 0 1 14%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 14%;
+          flex: 0 1 14%;
 }
 
 div.voiceControl__content-voice-phrase  {
@@ -202,9 +224,12 @@ div.voiceControl__content-voice-phrase div {
 }
 
 .voiceControl__animation-girl {
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   padding-bottom: 30px;
-  align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   position: relative;
 }
 
@@ -219,23 +244,48 @@ div.voiceControl__content-voice-phrase div {
 
 .voiceControl__animation-girl-img._anim-show._active {
   opacity: 1;
-  transform: translate(0px, 0px);
+  -webkit-transform: translate(0px, 0px);
+      -ms-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
   bottom: 130px;
+  -webkit-transition: all 2s linear;
+  -o-transition: all 2s linear;
   transition: all 2s linear;
-  animation-name: girl-levitation;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: girl-levitation;
+          animation-name: girl-levitation;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes girl-levitation {
+  0% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  50% {
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
+  }
+  100% {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
 }
 
 @keyframes girl-levitation {
   0% {
-    transform: rotate(-1deg);
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
   }
   50% {
-    transform: rotate(1deg);
+    -webkit-transform: rotate(1deg);
+            transform: rotate(1deg);
   }
   100% {
-    transform: rotate(-1deg);
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
   }
 }
 
@@ -249,19 +299,39 @@ div.voiceControl__content-voice-phrase div {
 }
 
 .voiceControl__animation-girl-pit._anim-show._active {
-  animation-name: pit-animation;
-  animation-duration: 2s;
+  -webkit-animation-name: pit-animation;
+          animation-name: pit-animation;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+@-webkit-keyframes pit-animation {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 @keyframes pit-animation {
   0% {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   50% {
-    transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
   }
   100% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -273,11 +343,16 @@ div.voiceControl__content-voice-phrase div {
   }
 
   .voiceControl__wrapper {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .voiceControl__content {
-    flex: 0 0 45%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 45%;
+            flex: 0 0 45%;
     padding-left: 0px;
   }
 
@@ -300,7 +375,9 @@ div.voiceControl__content-voice-phrase div {
 
   .voiceControl__animation-girl{
     margin-bottom: 40px;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
 
   .voiceControl__animation-girl-img {
@@ -311,13 +388,19 @@ div.voiceControl__content-voice-phrase div {
   
   .voiceControl__animation-girl-img._anim-show._active {
     opacity: 1;
-    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+        -ms-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
     bottom: 20px;
+    -webkit-transition: all 2s linear;
+    -o-transition: all 2s linear;
     transition: all 2s linear;
    }
 
    .voiceControl__interface-img{
-    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+            transform: scale(1.3);
     margin-bottom: 70px;
   }
 
