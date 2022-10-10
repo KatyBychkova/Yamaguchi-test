@@ -1,4 +1,7 @@
 # Yamaguchi-test
 
-В googlefonts нет шрифта Bebas Neue, Bold. Использовала Bebas Neue Regular.
+Два блока сайта:
+ - для экрана 1920 х 900
+ - для экрана 320 х 568
+ 
 
